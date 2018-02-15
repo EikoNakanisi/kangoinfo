@@ -1,0 +1,79 @@
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+      <div class="navbar-header">
+        <p><font size="+1" color="#000000">グラフデータ参照画面</font><br>
+        </p>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+<a href="javascript:history.back()" class="btn btn-default btn-sm active">戻る</a>
+</ul>
+      </div>
+  </div>
+</nav>
+</header>
+
+<br><br><br><br>
+
+
+<table border="1" cellspacing="0" cellpadding="5" bordercolor="#333333">
+<tr>
+<th bgcolor="#CCCCFF" ><font size="+1" color="#000000">測定時刻</font></th>
+<th bgcolor="#FFFFFF" width="150"><font size="+1" color="#000000">1/15 10:00</font></th>
+<th bgcolor="#FFFFFF" width="150"><font size="+1" color="#000000">1/15 19:00</font></th>
+<th bgcolor="#FFFFFF" width="150"><font size="+1" color="#000000">1/16 6:00</font></th>
+<th bgcolor="#FFFFFF" width="150"><font size="+1" color="#000000">1/16 10:00</font></th>
+<th bgcolor="#FFFFFF" width="150"><font size="+1" color="#000000">1/16 19:00</font></th>
+<th bgcolor="#FFFFFF" width="150"><font size="+1" color="#000000">1/17 6:00</font></th>
+
+</tr>
+<tr>
+<td bgcolor="#CCCCFF" align="center" nowrap><font size="+1" color="#000000">心拍数</font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.m_bp %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.l_bp %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.d_bp %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.m_kt %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.l_kt %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.d_kt %></font></td>
+</tr>
+<tr>
+<td bgcolor="#CCCCFF" align="center" nowrap><font size="+1" color="#000000">非観血(収縮期)</font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.m_p %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.l_p %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.d_p %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.m_r %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.l_r %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.d_r %></font></td>
+</tr>
+<tr>
+<td bgcolor="#CCCCFF" align="center" nowrap><font size="+1" color="#000000">非観血(拡張期)</td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.m_o2root %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.l_o2root %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.d_o2root %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.m_o2rate %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.l_o2rate %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.d_o2rate %></font></td>
+</tr>
+<tr>
+<td bgcolor="#CCCCFF" align="center" nowrap><font size="+1" color="#000000">体温(表皮)</font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.m_meal %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.l_meal %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.d_meal %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.m_snack %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.l_snack %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.d_snack %></font></td>
+</tr>
+<tr>
+<td bgcolor="#CCCCFF" align="center" nowrap><font size="+1" color="#000000">呼吸数</font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.m_spo2 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.l_spo2 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.d_spo2 %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.m_bs %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.l_bs %></font></td>
+<td bgcolor="#FFFFFF" valign="top" width="150"><font size="+1" color="#000000"><%= @observation.d_bs %></font></td>
+</tr>
+</table>
+
+<%= link_to 'edit', edit_observation_path(@observation) %>|
+<%= link_to 'Index', observations_path %>
