@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180212164816) do
+ActiveRecord::Schema.define(version: 20180216081642) do
 
   create_table "books", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "plan_id"
@@ -413,56 +413,6 @@ ActiveRecord::Schema.define(version: 20180212164816) do
     t.datetime "updated_at",               null: false
   end
 
-  create_table "observations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.date     "config_day"
-    t.integer  "user_id"
-    t.string   "m_bp"
-    t.string   "l_bp"
-    t.string   "d_bp"
-    t.float    "m_kt",         limit: 24
-    t.float    "l_kt",         limit: 24
-    t.float    "d_kt",         limit: 24
-    t.integer  "m_p"
-    t.integer  "l_p"
-    t.integer  "d_p"
-    t.integer  "m_r"
-    t.integer  "l_r"
-    t.integer  "d_r"
-    t.string   "m_o2root"
-    t.string   "l_o2root"
-    t.string   "d_o2root"
-    t.integer  "m_o2rate"
-    t.integer  "l_o2rate"
-    t.integer  "d_o2rate"
-    t.string   "m_meal"
-    t.string   "l_meal"
-    t.string   "d_meal"
-    t.string   "m_snack"
-    t.string   "l_snack"
-    t.string   "d_snack"
-    t.string   "m_pain"
-    t.string   "l_pain"
-    t.string   "d_pain"
-    t.string   "m_numbness"
-    t.string   "l_numbness"
-    t.string   "d_numbness"
-    t.string   "m_drowsiness"
-    t.string   "l_drowsiness"
-    t.string   "d_drowsiness"
-    t.integer  "m_spo2"
-    t.integer  "l_spo2"
-    t.integer  "d_spo2"
-    t.string   "m_bs"
-    t.string   "l_bs"
-    t.string   "d_bs"
-    t.string   "m_insulin"
-    t.string   "l_insulin"
-    t.string   "d_insulin"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-    t.index ["user_id"], name: "index_observations_on_user_id", using: :btree
-  end
-
   create_table "plans", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "np01"
     t.string   "np02"
@@ -739,6 +689,40 @@ ActiveRecord::Schema.define(version: 20180212164816) do
     t.text     "ptn14",           limit: 65535
   end
 
+  create_table "vitals", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "p01"
+    t.string   "p02"
+    t.string   "p03"
+    t.string   "p04"
+    t.string   "p05"
+    t.string   "p06"
+    t.string   "bpu01"
+    t.string   "bpu02"
+    t.string   "bpu03"
+    t.string   "bpu04"
+    t.string   "bpu05"
+    t.string   "bpu06"
+    t.string   "bpd01"
+    t.string   "bpd02"
+    t.string   "bpd03"
+    t.string   "bpd04"
+    t.string   "bpd05"
+    t.string   "bpd06"
+    t.string   "kt01"
+    t.string   "kt02"
+    t.string   "kt03"
+    t.string   "kt04"
+    t.string   "kt05"
+    t.string   "kt06"
+    t.string   "r01"
+    t.string   "r02"
+    t.string   "r03"
+    t.string   "r04"
+    t.string   "r05"
+    t.string   "r06"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   add_foreign_key "books", "plans"
-  add_foreign_key "observations", "users"
 end

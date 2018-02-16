@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     resources :foods, only: [:show]
   end
   resources :users
-  resources :observations
+  resources :vitals
   resources :dinstructions
   resources :ninstructions
   resources :injections

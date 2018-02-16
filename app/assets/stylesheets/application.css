@@ -684,8 +684,7 @@ table.y_data_title td.r_none {
 div.y_scroll_box {
   width: 500px;
   max-height: 150px;
-  height: auto !important;
-  height: 100px;
+  height: 150px;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -753,7 +752,7 @@ table.y_data_title2 td.r_none {
 div.y_scroll_box2 {
   width: 500px;
   max-height: 400px;
-  height: 100px;
+  height: 400px;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -818,7 +817,7 @@ table.y_data_title3 td.r_none {
 div.y_scroll_box3 {
   width: 1100px;
   max-height: 650px;
-  height: 100px;
+  height: 650px;
   overflow-x: hidden;
   overflow-y: scroll;
 }
